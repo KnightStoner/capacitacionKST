@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col">
+        <app-auditoriafiltros
+            (changeConfigEvent) ="getErrores($event)"
+        >
+        </app-auditoriafiltros>
+        <br>
+        <app-erroreslista
+            [listaErrores]="logs"
+            [totalRecords]="totalRecords"
+            [filapagina]="totalRecords"
+            [loading]="loading"
+            (changeConfigEvent)="onClickHijo($event)"
+        ></app-erroreslista>
+    </div>
+</div>

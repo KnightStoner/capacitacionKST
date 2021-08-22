@@ -1,0 +1,124 @@
+
+
+
+<div *ngIf="isShown"  class="card">
+    <div class="card-header">
+        <h4>{{titulo}} </h4>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="myForm" (ngSubmit)="guardar()">
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <label for="validationCustom01">Nombre y Apellidos</label>
+                <input type="text" 
+                      class="form-control" 
+                      id="validationCustom01" 
+                      formControlName="nombre"
+                      (input)="cambiosInput($event)"
+                      [ngClass]="{ 'is-invalid': myForm.controls.nombre.invalid }"
+                      >
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="validationCustom02">Login</label>
+                <input type="text"
+                       class="form-control" 
+                       id="validationCustom02" 
+                       formControlName="login"
+                       (input)="cambiosInput($event)"
+                       [ngClass]="{ 'is-invalid': myForm.controls.login.invalid }"
+                       >
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <label for="validationCustom03">Email</label>
+                <input 
+                    type="email" 
+                    class="form-control" 
+                    id="validationCustom03"
+                    formControlName="email"
+                    (input)="cambiosInput($event)"
+                    [ngClass]="{
+                      'is-invalid': myForm.controls.email.invalid,
+                      'is-valid': myForm.controls.email.valid
+                    }"
+                    >
+                    <div
+                    *ngIf="myForm.controls.email.invalid"
+                    id="validationServer03Feedback"
+                    class="invalid-feedback"
+                  >
+                    Proporcione un correo electrónico válido.
+                  </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="validationCustom03">Contraseña</label>
+                <input 
+                    type="password" 
+                    class="form-control" 
+                    id="validationCustom04"
+                    formControlName="password"
+                    (input)="cambiosInput($event)"
+                    [ngClass]="{ 'is-invalid': myForm.controls.password.invalid }"
+                    >
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col-md-3 mb-3">
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="dominioCheck" required>
+                    <label class="form-check-label" for="dominioCheck">
+                      No es dominio
+                    </label>
+                    <div class="invalid-feedback">
+                      You must agree before submitting.
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="contraseñaCheck" required>
+                    <label class="form-check-label" for="contraseñaCheck">
+                      Cambio Contraseña
+                    </label>
+                    <div class="invalid-feedback">
+                      You must agree before submitting.
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="estadoCheck" required>
+                    <label class="form-check-label" for="estadoCheck">
+                      Estado
+                    </label>
+                    <div class="invalid-feedback">
+                      You must agree before submitting.
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+
+            
+          
+            <button class="btn btn-primary"
+            
+             [disabled]="botonSubmit"
+           
+             >Guardar</button>
+          </form>
+    </div>
+  </div>

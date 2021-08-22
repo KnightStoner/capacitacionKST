@@ -1,0 +1,42 @@
+<div class="card">
+    <div class="card-header">
+        
+    </div>
+    <p-table 
+    [value] = "listaUsuarios"
+    [loading]="loading"
+    [(first)]="filapagina"
+    [paginator]="true" [rows]="5" [showCurrentPageReport]="true" 
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10,25,50]">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Login</th>
+                <th>Email</th>
+                
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-user>
+            <tr>
+                <td>{{user.id}}</td>
+                <td>{{user.nombre}}</td>
+                <td>{{user.login}}</td>
+                <td>{{user.email}}</td>
+                
+                  <td class="ctn-acciones">
+                      <button class="btn btn-primary"(click)="onPerfil(user)"  >Perfil</button>
+                  </td>
+                  <td >
+                    <button class="btn btn-primary" (click)="onEdit(user)">Editar</button>
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="paginatorleft">
+            
+          </ng-template>
+          <ng-template pTemplate="paginatorright">
+           
+          </ng-template>
+    </p-table>
+</div>

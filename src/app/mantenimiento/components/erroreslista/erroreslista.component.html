@@ -1,0 +1,49 @@
+
+
+<div class="card">
+    <div class="card-header">
+        
+    </div>
+    <p-table 
+        [value] = "listaErrores"
+        [paginator]="totalRecords > 0"
+        [rows]="rowsPagina"
+        [autoLayout]="true"
+        [loading]="loading"
+        [first]="0"
+         [lazy]="true"
+        (onLazyLoad)="nextPage($event)"
+        [totalRecords]="totalRecords"
+        [showCurrentPageReport]="true" 
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" 
+     >
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Id</th>
+                <th>IdTransaccion</th>
+                <th>ApiMethod</th>
+                <th>FechaRegistro</th>
+                <th>NombreApi</th>
+                <th>Clase</th>
+                <th>UsuarioEjecucion</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-user>
+            <tr>
+                <td>{{user.id}}</td>
+                <td>{{user.idtransaccion}}</td>
+                <td>{{user.apimethod}}</td>
+                <td>{{user.fecharegistro | date:"dd/MM/yyy HH:mm:ss"}}</td>
+                <td>{{user.nombreapi}}</td>
+                <td>{{user.clase}}</td>
+                <td>{{user.usuarioejecucion}}</td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="paginatorleft">
+            
+          </ng-template>
+          <ng-template pTemplate="paginatorright">
+           
+          </ng-template>
+    </p-table>
+</div>

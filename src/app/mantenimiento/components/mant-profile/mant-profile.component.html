@@ -1,0 +1,21 @@
+<div class="row">   
+    <div class="col">
+     
+      <app-card 
+          [titulo]="tituloCardPerfil"
+         >
+        <app-perfildetalle 
+            [usuarioPerfil] = "perfilUsuario">
+        </app-perfildetalle>
+      </app-card>
+     
+      <br>
+      <app-card           
+        [titulo]="tituloCardAplicacion"
+         >
+        <app-aplicaciondetalle
+          [aplicacion] = "aplicacion">
+        </app-aplicaciondetalle>
+      </app-card>
+   </div>
+</div>

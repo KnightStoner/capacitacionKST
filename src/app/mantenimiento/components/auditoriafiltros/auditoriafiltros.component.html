@@ -1,0 +1,45 @@
+
+
+<h4>Auditoria Errores</h4>
+  <div class="card">
+
+    <div class="card-body">
+        <form [formGroup]="formGroup">
+            <div class="form-row">
+              <div class="form-group col-md-3">
+                <label for="inputFechaInicio">Fecha Inicio</label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="inputFechaInicio"
+                    formControlName="fechaInicio"
+                >
+              </div>
+              <div class="form-group col-md-3">
+                <label for="inputFechaFin">Fecha Fin</label>
+                <input type="text" class="form-control" 
+                formControlName="fechaFin"
+                id="inputFechaFin">
+              </div>
+              <div class="form-group col-md-3">
+                <label for="inputUsuario">Usuario Ejecución</label>
+                <input type="text" class="form-control" 
+                formControlName="usuario"
+                id="inputUsuario">
+              </div>
+              <div class="form-group col-md-3">
+                <label for="inputApi">Nombre Api</label>
+                <input type="text" class="form-control"
+                formControlName="nombreApi"
+                 id="inputApi">
+              </div>
+            </div>
+            <div class="text-right"> <!--You can add col-lg-12 if you want -->
+                <button 
+                   class="btn btn-primary"
+                   (click)="buscar()"
+                   >Buscar</button>
+            </div>
+          </form>
+    </div>
+  </div>
