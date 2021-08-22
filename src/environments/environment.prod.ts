@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+  production: true,
+  token: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjEiLCJMb2dpbiI6ImFkbWluIiwiTm9tYnJlIjoiQWRtaW5pc3RyYWRvciBRQSIsIk51bWVyb0RvY3VtZW50byI6IkY0ZmFwTmRhczJTMTZhUThMekd1bmhiVEZxdm5xU24zUGh1WUV0Z0pPd1E9IiwiSWRlbnRpZmljYWRvclVuaWNvIjoiNmFkOWI3MjUtNWM0MC00MThiLTg5MTAtNGQ4YWEzNDAyZTRmIiwiYWNjaW9uZXMiOiJbXSIsInJlc3RyaWNjaW9uZXMiOiJbXSIsIklkQXBsaWNhY2lvbiI6IjE2IiwiQXBwS2V5IjoiUkdsemRISnBiSFY2WDBGd2NGUmxjM1JsY2w5QmNHeHBZMkZqYVc5dSIsIkFwcENvZGUiOiJCMUJEMjQ1Ri03QTIwLTQxOUQtQUE4Ny04Rjk1NDFFREIzMkIiLCJuYmYiOjE2Mjk2NzE0NDIsImV4cCI6MTYyOTY3MzI0MiwiaWF0IjoxNjI5NjcxNDQyfQ.zxmbG7yi3AGVKEPYx5qu8Q-vzV2psB_DzFwUvZkJJWo',
+  urlApiSeguridad:'http://10.240.30.222/rest-v2/seguridad/api/v1',
+  urlLog:'http://10.240.30.222/rest-v2/log/api/v1'
 };
