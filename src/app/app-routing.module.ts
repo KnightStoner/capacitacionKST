@@ -4,7 +4,7 @@ import { MantUserComponent } from '@mantenimiento/components/mant-user/mant-user
 import { TemplatesComponent } from './templates/templates.component';
 
 const routes: Routes = [
-  {path:'', redirectTo: 'templates', pathMatch:'full'},
+  {path:'', redirectTo: 'mant-user', pathMatch:'full'},
   {path:'mant-user', component: MantUserComponent},
   {path:'templates', component: TemplatesComponent},
   {path:'react-form', component: TemplatesComponent}
