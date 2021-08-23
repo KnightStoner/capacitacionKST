@@ -19,6 +19,7 @@ import { CalendarModule } from 'primeng-lts/calendar';
 import { AuditoriaerroresComponent } from './components/auditoriaerrores/auditoriaerrores.component';
 import { AuditoriafiltrosComponent } from './components/auditoriafiltros/auditoriafiltros.component';
 import { ErroreslistaComponent } from './components/erroreslista/erroreslista.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 
 
@@ -34,7 +35,8 @@ import { ErroreslistaComponent } from './components/erroreslista/erroreslista.co
     CardComponent,
     AuditoriaerroresComponent,
     AuditoriafiltrosComponent,
-    ErroreslistaComponent
+    ErroreslistaComponent,
+    HighlightDirective
   ],
   imports: [
     CommonModule,
@@ -43,6 +45,7 @@ import { ErroreslistaComponent } from './components/erroreslista/erroreslista.co
     FormsModule,
     ReactiveFormsModule,
     CalendarModule
+    
   ]
 })
 export class MantenimientoModule { }

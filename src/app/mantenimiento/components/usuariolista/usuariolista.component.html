@@ -14,20 +14,24 @@
                 <th>Nombre</th>
                 <th>Login</th>
                 <th>Email</th>
-                
+                <th>Estado</th>
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-user>
-            <tr>
+            <tr [appHighlight]="user.estado.id"
+            
+            >
                 <td>{{user.id}}</td>
                 <td>{{user.nombre}}</td>
                 <td>{{user.login}}</td>
                 <td>{{user.email}}</td>
-                
-                  <td class="ctn-acciones">
-                      <button class="btn btn-primary"(click)="onPerfil(user)"  >Perfil</button>
-                  </td>
-                  <td >
+                <td 
+                    
+                    >{{user.estado.descripcion}}</td>
+                <td class="ctn-acciones">
+                    <button class="btn btn-primary"(click)="onPerfil(user)"  >Perfil</button>
+                </td>
+                <td >
                     <button class="btn btn-primary" (click)="onEdit(user)">Editar</button>
                 </td>
             </tr>
